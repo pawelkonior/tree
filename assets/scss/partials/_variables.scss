@@ -1,0 +1,40 @@
+// ---------------------------------
+// VARIABLES
+
+// ---------------------------------
+// VARIABLES: COLORS
+
+// Colors: Brand
+$brand-1: #3ABB8D; // Green
+$brand-1-light: #75C8AA;
+$brand-1-x-light: #C7E9DD;
+$brand-2: #313C5A; // Blue: Dark
+$brand-2-light: #41568C;
+
+// Colors: Warm
+$red-crimson: #D05858;
+
+// Colors: Cool
+$blue-aqua: #3E9CD0;
+
+// Colors: Black, White, Gray Spectrum
+$black: #000;
+$gray-coal: #222;
+$gray-lead: #666;
+$gray-cement: #999;
+$gray-titanium: #AAA;
+$gray-cloud: #DADEE8;
+$gray-mist: #F1F1F1;
+$white: #FFF;
+
+// Colors: Typography
+$color-font: $gray-lead;
+$color-link: $brand-1;
+$color-link-hover: $brand-2-light;
+
+// Colors: States
+$color-focus: $brand-1-light;
+$color-error: $red-crimson;
+$color-success: $brand-1;
+$color-info: $brand-2-light;
+$color-disabled: $gray-mist;
