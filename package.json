@@ -1,0 +1,25 @@
+{
+  "name": "tree",
+  "version": "1.0.0",
+  "description": "## Style Guide: Patterns",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass ./assets/scss/styles.scss ./assets/css/styles.css --watch",
+    "scss-guide": "sass ./assets/scss/style-guide.scss ./assets/css/style-guide.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pawelkonior/tree.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pawelkonior/tree/issues"
+  },
+  "homepage": "https://github.com/pawelkonior/tree#readme",
+  "dependencies": {
+    "sass": "^1.32.12"
+  }
+}
