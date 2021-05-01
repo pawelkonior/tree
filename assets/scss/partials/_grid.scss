@@ -1,0 +1,209 @@
+// ---------------------------------------------
+// GRID
+
+
+// ---------------------------------------------
+// GRID: CONTAINERS
+//  - Wrap a row in a container
+
+// Container: Mixin
+//  - All parameters have defaults
+//  - Parameters:
+//    - $max-width {number | boolean} : Maximum width
+//    - $grid-gutter {number} : Gutter or horizontal padding
+
+@mixin container($max-width: $media-lg, $grid-gutter: $grid-gutter) {
+  @if $max-width {
+    max-width: $max-width;
+  }
+
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $spacing-2;
+  padding-right: $spacing-2;
+}
+
+// Container: Default / Large
+.container-lg {
+  @include container;
+}
+
+// Container: Medium
+.container-mid {
+  @include container($media-mid);
+}
+
+// Container: Small
+.container-sm {
+  @include container($media-sm);
+}
+
+// Container: Full Width
+.container-full {
+  @include container($max-width: false);
+}
+
+
+// ---------------------------------------------
+// GRID: CLEARFIX
+// Add a clearfix class or mixin to the parent of floated children
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+// ---------------------------------------------
+// GRID: ROWS
+//  - Used to wrap grid columns
+//  - Rows reset the 1st column's left and last column's right gutter
+//  - Must be wrapped in a container
+//  - All parameters have defaults
+//  - Parameters:
+//    - $grid-gutter {number}: Negative margins to offset horizontal padding
+
+// Row: Mixin
+@mixin row($grid-gutter: $grid-gutter) {
+  margin-left: -$grid-gutter;
+  margin-right: -$grid-gutter;
+  @include clearfix;
+}
+
+// Row: Default
+.row {
+  @include row;
+}
+
+// Row: Small
+.row-sm {
+  @include row($grid-gutter: $grid-gutter-sm);
+}
+
+// Row: Large
+.row-lg {
+  @include row($grid-gutter: $grid-gutter-lg);
+}
+
+
+// ---------------------------------------------
+// GRID: COLUMNS
+//  - Wrap in a row:
+//  - Columns create gutters
+//  - All parameters have defaults
+//  - Parameters:
+//    - $grid-gutter {number} : Gutter or horizontal padding
+
+// Column: Mixin
+@mixin col($grid-gutter: $grid-gutter) {
+  @if $grid-gutter {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+  }
+}
+
+// Column: Default
+.col {
+  @include col;
+}
+
+// Column: Small
+.col-sm {
+  @include col($grid-gutter: $grid-gutter-sm);
+}
+
+// Column: Large
+.col-lg {
+  @include col($grid-gutter: $grid-gutter-lg);
+}
+
+
+// ---------------------------------------------
+// Column: Classes
+// Generates classes for 12 columns
+
+// Classes: Default
+// E.g, .col-1, .col-12
+@for $i from 1 through $grid-column-count {
+  .col-#{$i} {
+    width: percentage($i / $grid-column-count);
+  }
+}
+
+// Classes: Small Breakpoint
+// E.g, .col-1-sm, .col-12-sm
+@media (min-width: $media-sm) {
+  @for $i from 1 through $grid-column-count {
+    .col-#{$i}-sm {
+      width: percentage($i / $grid-column-count);
+    }
+  }
+}
+
+// Classes: Medium Breakpoint
+// E.g, .col-1-mid, .col-12-mid
+@media (min-width: $media-mid) {
+  @for $i from 1 through $grid-column-count {
+    .col-#{$i}-mid {
+      width: percentage($i / $grid-column-count);
+    }
+  }
+}
+
+// Classes: Large Breakpoint
+// E.g, .col-1-lg, .col-12-lg
+@media (min-width: $media-lg) {
+  @for $i from 1 through $grid-column-count {
+    .col-#{$i}-lg {
+      width: percentage($i / $grid-column-count);
+    }
+  }
+}
+
+// ---------------------------------------------
+// GRID: FLOATS
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+// ---------------------------------------------
+// GRID: FLEXBOX
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.margin-left-auto {
+  margin-left: auto;
+}
+
+.margin-right-auto {
+  margin-right: auto;
+}
