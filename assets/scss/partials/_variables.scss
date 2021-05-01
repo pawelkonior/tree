@@ -38,3 +38,47 @@ $color-error: $red-crimson;
 $color-success: $brand-1;
 $color-info: $brand-2-light;
 $color-disabled: $gray-mist;
+
+
+// ---------------------------------
+// VARIABLES: FONTS
+
+// Font Families
+$font-family-1: 'Nunito Sans', sans-serif;
+
+// Fonts: Weights
+$font-regular: 400;
+$font-semi-bold: 600;
+$font-bold: 700;
+
+// Fonts: Line Height
+$line-height: 1.5;
+
+// Fonts: Sizes
+$font-size: rem(14);
+$font-size-sm: rem(12);
+$font-size-xs: rem(10);
+$font-size-lg: rem(16);
+
+// Fonts: Headings: Sizes
+$h1: rem(24);
+$h2: rem(22);
+$h3: rem(20);
+$h4: rem(18);
+$h5: rem(16);
+$h6: rem(14);
+
+// ---------------------------------
+// VARIABLES: FONT ICONS
+
+// Font Icons: Families
+$font-family-icon: 'icomoon';
+
+// Font Icons: Spacing: Left and Right
+$icon-spacing: rem(5);
+$icon-spacing-lg: ($icon-spacing * 2);
+
+// Font Icons: Sizes
+$icon-size-lg: rem(16);
+$icon-size-xl: rem(18);
+$icon-size-xxl: rem(24);

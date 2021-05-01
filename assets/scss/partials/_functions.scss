@@ -1,0 +1,14 @@
+// ---------------------------------
+// FUNCTIONS
+
+
+// ---------------------------------
+// FUNCTIONS: PIXELS TO REMS
+// Convert pixels to rem unit: Used for any dimensions
+// - Parameters:
+//  - $size {number} : The desired size for the target
+//  - $base_size {number} : Base size for the HTML document
+
+@function rem($size, $base_size: 16) {
+  @return ($size / $base_size) * 1rem;
+}
