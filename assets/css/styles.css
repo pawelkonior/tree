@@ -506,6 +506,126 @@ template {
   background-color: #F1F1F1;
 }
 
+.spacing {
+  padding: 0.625rem;
+}
+
+.spacing-h {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.spacing-v {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.spacing-l {
+  padding-left: 0.625rem;
+}
+
+.spacing-r {
+  padding-right: 0.625rem;
+}
+
+.spacing-t {
+  padding-top: 0.625rem;
+}
+
+.spacing-b {
+  padding-bottom: 0.625rem;
+}
+
+.spacing-2 {
+  padding: 1.25rem;
+}
+
+.spacing-2-h {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.spacing-2-v {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.spacing-2-l {
+  padding-left: 1.25rem;
+}
+
+.spacing-2-r {
+  padding-right: 1.25rem;
+}
+
+.spacing-2-t {
+  padding-top: 1.25rem;
+}
+
+.spacing-2-b {
+  padding-bottom: 1.25rem;
+}
+
+.spacing-3 {
+  padding: 1.875rem;
+}
+
+.spacing-3-h {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+}
+
+.spacing-3-v {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+}
+
+.spacing-3-l {
+  padding-left: 1.875rem;
+}
+
+.spacing-3-r {
+  padding-right: 1.875rem;
+}
+
+.spacing-3-t {
+  padding-top: 1.875rem;
+}
+
+.spacing-3-b {
+  padding-bottom: 1.875rem;
+}
+
+.spacing-half {
+  padding: 0.3125rem;
+}
+
+.spacing-half-h {
+  padding-left: 0.3125rem;
+  padding-right: 0.3125rem;
+}
+
+.spacing-half-v {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+
+.spacing-half-l {
+  padding-left: 0.3125rem;
+}
+
+.spacing-half-r {
+  padding-right: 0.3125rem;
+}
+
+.spacing-half-t {
+  padding-top: 0.3125rem;
+}
+
+.spacing-half-b {
+  padding-bottom: 0.3125rem;
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("../font-icons/icomoon.ttf") format("truetype"), url("../font-icons/icomoon.woff") format("woff"), url("../font-icons/icomoon.svg") format("svg");

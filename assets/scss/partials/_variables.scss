@@ -98,3 +98,26 @@ $spacing-half: ($spacing / 2);
 $transition-linear: all 0.2s linear;
 $transition-ease-in: all 0.2s ease-in;
 
+// ---------------------------------
+// VARIABLES: MEDIA QUERIES
+
+// Media Queries: Min-width
+$media-lg: rem(1200);
+$media-mid: rem(900);
+$media-sm: rem(600);
+
+// Media Queries: Max-width
+$media-lg-max: (($media-lg) - rem(1));
+$media-mid-max: (($media-mid) - rem(1));
+$media-sm-max: (($media-sm) - rem(1));
+
+// ---------------------------------
+// VARIABLES: GRID
+
+// Grid: Column Count
+$grid-column-count: 12;
+
+// Grid: Gutters
+$grid-gutter: rem(7.5);
+$grid-gutter-sm: ($grid-gutter / 2);
+$grid-gutter-lg: ($grid-gutter * 2);
