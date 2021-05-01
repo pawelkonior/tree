@@ -82,3 +82,19 @@ $icon-spacing-lg: ($icon-spacing * 2);
 $icon-size-lg: rem(16);
 $icon-size-xl: rem(18);
 $icon-size-xxl: rem(24);
+
+// ---------------------------------
+// VARIABLES: SPACING
+// Use for padding, margins, etc.
+
+$spacing: rem(10);
+$spacing-2: ($spacing * 2);
+$spacing-3: ($spacing * 3);
+$spacing-half: ($spacing / 2);
+
+// ---------------------------------
+// VARIABLES: TRANSITIONS
+
+$transition-linear: all 0.2s linear;
+$transition-ease-in: all 0.2s ease-in;
+
