@@ -43,9 +43,55 @@
             </ul>
         </nav>
         <section class="styleguide-content">
+            <img src="assets/svg/logos/logo.svg" width="36" height="36" alt="Logo: Adopt-a-Tree"
+                 class="styleguide-logo">
+            <h1 class="styleguide-heading">Style Guide</h1>
 
-            <section class="styleguide-section" id="styleguide-section-{SECTION_NAME}">
-                <h2>{SECTION_TITLE}</h2>
+            <section id="styleguide-section-guidelines" class="styleguide-section">
+                <h2>Guidelines</h2>
+                <div class="styleguide-section-docs">
+                    <p>Adopt-a-Tree uses <a href="http://sass-lang.com" target="_blank">Sass</a> as a preprocessor for
+                        this project's CSS.</p>
+                    <p>Watch and compile the Sass files using the command line, or a GUI application like <a
+                            href="https://prepros.io" target="_blank">Prepros</a>, or a task runner like <a
+                            href="https://gulpjs.com" target="_blank">Gulp</a>, or a bundler like <a
+                            href="https://webpack.js.org" target="_blank">Webpack</a>.</p>
+                    <p>This project uses node-sass via the command line using the following command:</p>
+                    <div class="spacing-b">
+                        <pre><code class="styleguide-code-inline">node-sass --watch assets/scss/styles.scss assets/css/styles.css</code></pre>
+                    </div>
+                    <p><span class="styleguide-do">Do</span> use single-line Sass comments (which are the same as
+                        single-line JavaScript comments) for comments that other developers need to see, since they
+                        won't get compiled into the CSS stylesheet.</p>
+                    <p><span class="styleguide-dont">Don't</span> edit the <span class="font-bold">generated CSS</span>
+                        files.</p>
+                    <p><span class="styleguide-dont">Don't</span> use inline styles. The handful of inline styles in the
+                        style guide are purely for demo.</p>
+
+                    <p><span class="styleguide-do">Do </span> use <span class="font-bold">2 spaces</span> to indent your
+                        code.</p>
+                    <p><span class="styleguide-do">Do</span> follow hyphen-separated class naming. E.g. <code
+                            class="styleguide-code-inline">list-block</code>.</p>
+                    <p>Modifier classes use a double-hyphen naming convention. E.g.<code class="styleguide-code-inline">list-block--profile</code>.
+                    </p>
+                    <p><span class="styleguide-do">Do</span> create a separate class or ID for an element which requires
+                        JavaScript to modify its behavior. Prefix it with <code
+                                class="styleguide-code-inline">js-</code> and don't attach any styling to this class or
+                        ID.</p>
+                    <p><span class="styleguide-do">Do</span> browse through the <em>variables</em>, <em>globals</em>,
+                        <em>spacing</em> and <em>typography</em> partials. They contain plenty of reusable code.</p>
+                    <p><span class="styleguide-do">Do</span> use camelCase for naming variables and functions in
+                        JavaScript.</p>
+                    <p><span class="styleguide-do">Do</span> use semicolons after JavaScript statements.</p>
+                    <p><span class="styleguide-do">Do</span> strive for an accessible user interface for users of
+                        keyboards and screen readers.</p>
+                    <p><span class="styleguide-do">Do</span> ensure the project works on modern browers, including IE
+                        Edge, Chrome, Firefox, Safari, Android and iOS.</p>
+                </div>
+            </section>
+
+            <section class="styleguide-section" id="styleguide-section-logo">
+                <h2>Logo</h2>
                 <div class="styleguide-section-docs">
                     <p>{SECTION_DOCUMENTATION}</p>
                 </div>
@@ -63,22 +109,126 @@
                 </div>
             </section>
 
-            <section class="styleguide-section" id="styleguide-section-{SECTION_NAME}">
-                <h2>{SECTION_TITLE}</h2>
+            <section class="styleguide-section" id="styleguide-section-colors">
+                <h2>Colors</h2>
                 <div class="styleguide-section-docs">
-                    <p>{SECTION_DOCUMENTATION}</p>
+                    <p>Use variables or classes for colors.</p>
+                    <p>Background colors have a <code class="styleguide-code-inline">-bg</code> suffix.</p>
+                    <p>To incorporate a new color, add the color variable to the <em>variables</em> partial and refer to
+                        it in the Sass map inside the <em>colors</em> partial.</p>
                 </div>
                 <div class="styleguide-section-block">
                     <div class="styleguide-section-files">
-                        Reference files: {FILE_NAMES}
+                        Reference files: _colors.scss, _variables.scss
                     </div>
-                    <h3>{DEMO_TITLE}</h3>
+                    <h3>Colors: Brand</h3>
                     <div class="styleguide-demo-block">
-                        <div class="styleguide-demo-each">
-                            {DEMO_MARKUP}
-                        </div>
+                        <div class="styleguide-demo-each styleguide-demo-each--colors">
+                            <div>
+                                <div class="brand-1">$brand-1</div>
+                                <div class="styleguide-box-demo brand-1-bg"></div>
+                            </div>
+                            <div>
+                                <div class="brand-1-light">$brand-1-light</div>
+                                <div class="styleguide-box-demo brand-1-light-bg"></div>
+                            </div>
+                            <div>
+                                <div class="brand-1-x-light">$brand-1-x-light</div>
+                                <div class="styleguide-box-demo brand-1-x-light-bg"></div>
+                            </div>
+                            <div>
+                                <div class="brand-2">$brand-2</div>
+                                <div class="styleguide-box-demo brand-2-bg"></div>
+                            </div>
+                            <div>
+                                <div class="brand-2-light">$brand-2-light</div>
+                                <div class="styleguide-box-demo brand-2-light-bg"></div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
                         <button class="btn-styleguide-code" data-id="btn-styleguide-code">Code</button>
-                    </div>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Colors: Warm</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--colors">
+                            <div>
+                                <div class="red-crimson">$red-crimson</div>
+                                <div class="styleguide-box-demo red-crimson-bg"></div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code" data-id="btn-styleguide-code">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Colors: Cool</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--colors">
+                            <div>
+                                <div class="blue-aqua">$blue-aqua</div>
+                                <div class="styleguide-box-demo blue-aqua-bg"></div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code" data-id="btn-styleguide-code">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Colors: Black, White</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--colors">
+                            <div>
+                                <div class="black">$black</div>
+                                <div class="styleguide-box-demo black-bg"></div>
+                            </div>
+                            <div>
+                                <div class="white">$white</div>
+                                <div class="styleguide-box-demo white-bg"></div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code" data-id="btn-styleguide-code">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+
+                    <h3>Colors: Gray Spectrum</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--colors">
+                            <div>
+                                <div class="gray-coal">$gray-coal</div>
+                                <div class="styleguide-box-demo gray-coal-bg"></div>
+                            </div>
+                            <div>
+                                <div class="gray-lead">$gray-lead</div>
+                                <div class="styleguide-box-demo gray-lead-bg"></div>
+                            </div>
+                            <div>
+                                <div class="gray-cement">$gray-cement</div>
+                                <div class="styleguide-box-demo gray-cement-bg"></div>
+                            </div>
+                            <div>
+                                <div class="gray-titanium">$gray-titanium</div>
+                                <div class="styleguide-box-demo gray-titanium-bg"></div>
+                            </div>
+                            <div>
+                                <div class="gray-cloud">$gray-cloud</div>
+                                <div class="styleguide-box-demo gray-cloud-bg"></div>
+                            </div>
+                            <div>
+                                <div class="gray-mist">$gray-mist</div>
+                                <div class="styleguide-box-demo gray-mist-bg"></div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code" data-id="btn-styleguide-code">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
+                    <h3>Colors: Typography</h3>
+                    <div class="styleguide-demo-block">
+                        <div class="styleguide-demo-each styleguide-demo-each--colors">
+                            <div>
+                                <div class="color-font">$color-font</div>
+                                <div class="styleguide-box-demo color-font-bg"></div>
+                            </div>
+                            <div>
+                                <div class="color-link">$color-link</div>
+                                <div class="styleguide-box-demo color-link-bg"></div>
+                            </div>
+                        </div> <!-- /.styleguide-demo-each -->
+                        <button class="btn-styleguide-code" data-id="btn-styleguide-code">Code</button>
+                    </div> <!-- /.styleguide-demo-block -->
                 </div>
             </section>
             <section class="styleguide-section" id="styleguide-section-{SECTION_NAME}">
