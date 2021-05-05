@@ -1,3 +1,220 @@
+.btn-styleguide-menu {
+  background-color: #F1F1F1;
+  border-radius: 0;
+  height: 1.875rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+}
+@media (min-width: 37.5rem) {
+  .btn-styleguide-menu {
+    display: none;
+  }
+}
 
+.styleguide-sidebar {
+  background-color: #FFF;
+  font-weight: 600;
+  padding-bottom: 150px;
+  width: 12.5rem;
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  overflow: auto;
+  z-index: 1000;
+  transition: all 0.2s linear;
+}
+@media (max-width: 37.4375rem) {
+  .styleguide-sidebar {
+    left: -12.5rem;
+    top: 1.875rem;
+  }
+}
+@media (min-width: 37.5rem) {
+  .styleguide-sidebar {
+    left: 0;
+    top: 0;
+  }
+}
+.styleguide-sidebar a {
+  padding: 0.3125rem 0.625rem;
+  display: block;
+}
+.styleguide-sidebar a.active {
+  color: #FFF;
+  background-color: #313C5A;
+}
+
+.styleguide-sidebar--show {
+  left: 0;
+  transition: all 0.2s linear;
+}
+@media (max-width: 37.4375rem) {
+  .styleguide-sidebar--show {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.styleguide-link-label {
+  color: #313C5A;
+  background: #F1F1F1;
+  border-radius: 50%;
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding: 2px 0.3125rem;
+  margin-left: 0.3125rem;
+  display: inline-block;
+}
+
+.styleguide-logo {
+  display: block;
+  margin: 0 auto 1.875rem;
+}
+
+.styleguide-heading {
+  text-align: center;
+  margin: 0;
+}
+
+.styleguide-content {
+  padding: 3.125rem 0 1.875rem 0;
+  max-width: 75rem;
+}
+@media (min-width: 37.5rem) {
+  .styleguide-content {
+    padding: 1.875rem 1.25rem 0 13.75rem;
+    margin: 0 auto;
+  }
+}
+.styleguide-content pre {
+  white-space: pre-wrap;
+}
+
+.styleguide-section {
+  padding: 3.75rem 0 0 0;
+}
+.styleguide-section > .styleguide-section-docs {
+  padding: 0 1.25rem;
+}
+.styleguide-section > h2 {
+  text-align: center;
+}
+
+.styleguide-section-docs {
+  max-width: 650px;
+  margin: 0 auto 1.25rem auto;
+}
+
+.styleguide-section-block {
+  background-color: #FFF;
+  padding: 1.25rem;
+}
+.styleguide-section-block > h3 {
+  color: #999;
+  text-align: center;
+  padding: 0 0 0.625rem 0;
+}
+.styleguide-section-block > h4 {
+  text-align: center;
+  margin-bottom: 0.625rem;
+}
+
+.styleguide-section-files {
+  font-style: italic;
+  text-align: center;
+  margin: 0 0 1.25rem 0;
+}
+
+.styleguide-code-inline {
+  font-family: "Inconsolata", monospace;
+  background-color: #FFF;
+  padding: 0 0.15625rem;
+}
+
+.styleguide-code-block {
+  background-color: #C7E9DD;
+  border: 1px solid #3ABB8D;
+  font-family: "Inconsolata", monospace;
+  font-size: 0.875rem;
+  padding: 0.625rem;
+  margin: 0.625rem 0 1.25rem 0;
+  display: block;
+}
+.styleguide-demo-block .styleguide-code-block {
+  display: none;
+}
+
+.styleguide-demo-block .styleguide-code-block--show {
+  display: block;
+}
+
+.styleguide-dont, .styleguide-do {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.styleguide-do {
+  color: #3ABB8D;
+}
+
+.styleguide-dont {
+  color: #D05858;
+}
+
+.btn-styleguide-code {
+  margin: 1.25rem auto 1.875rem;
+  display: block;
+  width: 100px;
+}
+
+.styleguide-box-demo {
+  width: 100px;
+  height: 60px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0.625rem 0 1.25rem;
+}
+.styleguide-box-demo.white-bg, .styleguide-box-demo.gray-mist-bg {
+  border: 1px solid #DADEE8;
+}
+
+.styleguide-demo-each--colors {
+  font-size: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.styleguide-demo-each--colors > div {
+  padding: 0 0.46875rem;
+}
+.styleguide-demo-each--colors .white, .styleguide-demo-each--colors .gray-mist, .styleguide-demo-each--colors .color-disabled {
+  background-color: #666;
+}
+
+.styleguide-demo-each--spacing > div {
+  background-color: #F1F1F1;
+  margin: 0 0 0.625rem 0;
+}
+
+.styleguide-demo-each--containers > div {
+  margin-bottom: 0.625rem;
+  background-color: #C7E9DD;
+}
+
+.styleguide-demo-each--margin-auto > div {
+  background-color: #C7E9DD;
+  padding: 0.625rem;
+}
+
+ul > li {
+  list-style: none;
+}
+
+ul {
+  padding-left: 0;
+}
 
 /*# sourceMappingURL=style-guide.css.map */
