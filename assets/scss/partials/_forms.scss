@@ -1,0 +1,83 @@
+// ---------------------------------------------
+// FORMS
+
+// ---------------------------------------------
+// FORMS: OVERRIDES FOR BROWSER QUIRKS
+
+input, select {
+  border-radius: 0; // Removes border-radius on iOS
+  box-shadow: none; // Removes red border on inputs with 'required' attribute: Firefox
+  background-clip: padding-box; // Removes inset shadow on inputs on iOS
+}
+
+input[type="submit"].btn {
+  -webkit-appearance: none; // Fix for inputs with type submit to ensure styles are honored on iOS
+}
+
+// ---------------------------------------------
+// FORMS: FIELDS
+// Fields provide spacing between form elements
+
+.field {
+  margin-bottom: $spacing-2;
+}
+
+// ---------------------------------------------
+// FORMS: LABELS
+
+// Label: Default
+.label {
+  color: $gray-coal;
+  font-weight: $font-bold;
+  margin-bottom: $spacing;
+  display: block;
+}
+
+// Label: Size: Large: Modifier
+.label--lg {
+  font-size: $font-size-lg;
+}
+
+// Label: Inverse Styles: Modifier
+.label--inverse {
+  color: $white;
+}
+
+// ---------------------------------------------
+// FORMS: PLACEHOLDER: MIXIN
+
+// Use the mixin like this:
+// @include input-placeholder { color: #000; }
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder{
+    @content;
+  }
+
+  &::-moz-placeholder{
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder{
+    @content;
+  }
+}
+
+// ---------------------------------------------
+// FORMS: FOCUS STATE: MIXIN
+@mixin form-focus {
+  outline: 0;
+  border: rem(1) solid $color-focus;
+  transition: $transition-linear;
+}
+
+
+
+

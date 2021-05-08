@@ -30,3 +30,15 @@ Media Queries | | Tabs
 # Type of designs
 1. RWD - responsive web design (flexible)
 2. AWD - adaptive web design (breakpoints)
+
+
+# Browser engines
+1. Chakra -> Firefox
+2. Webkit
+    - chrome
+    - opera
+    - safari
+    - edge
+    - samsung
+    - facebook
+    - coc coc
