@@ -1,0 +1,196 @@
+// ---------------------------------
+// BUTTONS
+
+// ---------------------------------
+// BUTTONS: DEFAULT STYLING
+
+// Button Base: Mixin
+@mixin btn-base {
+  border-radius: $border-radius-xl;
+  border: rem(1) solid;
+  font-size: $font-size;
+  font-family: $font-family-1;
+  font-weight: $font-bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: $line-height;
+  padding: $btn-padding-v $spacing-3;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  transition: $transition-linear;
+
+  &:hover, &:focus {
+    transition: $transition-ease-in;
+  }
+
+  &:focus {
+    outline: rem(1) solid $color-focus;
+  }
+}
+
+.btn {
+  @include btn-base;
+}
+
+// ---------------------------------
+// BUTTONS: SOLID
+//  - Use for buttons with solid background colors
+//  - All parameters have defaults
+//  - Parameters:
+//    - $color {string} : Text color
+//    - $color-bg {string}: Background color
+//    - $color-bg-hover {string}: Background color on hover
+//    - $color-border {string}: Border color: Is background color by default
+
+// Button: Solid: Mixin
+@mixin btn-solid($color: $white, $color-bg: $brand-1, $color-bg-hover: $brand-1-light, $color-border: $color-bg) {
+  color: $color;
+  background-color: $color-bg;
+  border-color: $color-border;
+  box-shadow: $box-shadow;
+
+  &:hover, &:focus {
+    background-color: $color-bg-hover;
+    border-color: $color-bg-hover;
+    color: $color;
+  }
+}
+
+// Button: Solid: Brand 1: Modifier
+@mixin btn--brand-1 {
+  @include btn-solid;
+}
+
+.btn--brand-1 {
+  @include btn--brand-1;
+}
+
+// Button: Solid: Brand 2: Modifier
+@mixin btn--brand-2 {
+  @include btn-solid($color-bg: $brand-2, $color-bg-hover: $brand-2-light);
+}
+
+.btn--brand-2 {
+  @include btn--brand-2;
+}
+
+// Button: Solid: White: Modifier
+@mixin btn--white {
+  @include btn-solid($color: $brand-1, $color-bg: $white, $color-bg-hover: $gray-mist);
+}
+
+.btn--white {
+  @include btn--white;
+}
+
+
+// ---------------------------------------------
+// BUTTONS: HOLLOW
+//  - Use for buttons with a hollow background color
+//  - All parameters have defaults
+//  - Parameters:
+//    - $color {string} : Text color
+//    - $color-border {string}: Border color: Is text color by default
+//    - $color-hover {string}: Text color on hover
+
+// Button: Hollow: Mixin
+@mixin btn-hollow($color: $color-font, $color-border: currentColor, $color-hover: $gray-cement) {
+  color: $color;
+  background-color: transparent;
+  border-color: $color-border;
+
+  &:hover, &:focus {
+    color: $color-hover;
+  }
+}
+
+// Button: Hollow: Brand 1: Modifier
+@mixin btn-hollow--brand-1 {
+  @include btn-hollow($color: $brand-1, $color-hover: $brand-1-light);
+}
+
+.btn-hollow--brand-1 {
+  @include btn-hollow--brand-1;
+}
+
+// Button: Hollow: Brand 2: Modifier
+@mixin btn-hollow--brand-2 {
+  @include btn-hollow($color: $brand-2, $color-hover: $brand-2-light);
+}
+
+.btn-hollow--brand-2 {
+  @include btn-hollow--brand-2;
+}
+
+// Button: Hollow: White: Modifier
+@mixin btn-hollow--white {
+  @include btn-hollow($color: $white, $color-hover: $gray-cloud);
+}
+
+.btn-hollow--white {
+  @include btn-hollow--white;
+}
+
+
+// ---------------------------------------------
+// BUTTONS: SIZES: MODIFIERS
+
+// Button: Size: Small
+@mixin btn--sm {
+  font-size: $font-size-sm;
+  padding: $btn-padding-v-sm $spacing-3;
+}
+
+.btn--sm {
+  @include btn--sm;
+}
+
+// Button: Size: Extra Small
+@mixin btn--xs {
+  font-size: $font-size-xs;
+  padding: $btn-padding-v-xs ($spacing * 1.5);
+  line-height: 1.2;
+}
+
+.btn--xs {
+  @include btn--xs;
+}
+
+
+// ---------------------------------------------
+// BUTTONS: DISABLED: MODIFIER
+
+.btn--disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+
+// ---------------------------------------------
+// BUTTONS: RESET STYLES
+// Use for resetting styles on HTML Buttons
+
+@mixin btn-reset {
+  color: $color-font;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-family: $font-family-1;
+  font-size: $font-size;
+  font-weight: $font-regular;
+  line-height: $line-height;
+  text-align: left;
+  text-transform: inherit;
+  padding: 0;
+
+  &:hover {
+    color: $color-font;
+    background: none;
+  }
+}
+
+.btn-reset {
+  @include btn-reset;
+}

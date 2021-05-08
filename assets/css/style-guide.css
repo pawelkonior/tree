@@ -1,5 +1,4 @@
 .btn-styleguide-menu {
-  background-color: #F1F1F1;
   border-radius: 0;
   height: 1.875rem;
   position: fixed;
@@ -209,12 +208,8 @@
   padding: 0.625rem;
 }
 
-ul > li {
-  list-style: none;
-}
-
-ul {
-  padding-left: 0;
+.styleguide-demo-each--buttons .btn {
+  margin: 0 0 0.625rem 0;
 }
 
 /*# sourceMappingURL=style-guide.css.map */

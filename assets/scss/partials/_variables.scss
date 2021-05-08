@@ -121,3 +121,22 @@ $grid-column-count: 12;
 $grid-gutter: rem(7.5);
 $grid-gutter-sm: ($grid-gutter / 2);
 $grid-gutter-lg: ($grid-gutter * 2);
+
+// ---------------------------------
+// VARIABLES: BORDER RADIUS
+
+$border-radius: rem(10);
+$border-radius-lg: ($border-radius * 2);
+$border-radius-xl: ($border-radius * 3);
+
+// ---------------------------------
+// VARIABLES: BOX SHADOW
+
+$box-shadow: 0 rem(4) rem(10) rgba($black, 0.1);
+
+// ---------------------------------
+// VARIABLES: BUTTONS
+
+$btn-padding-v: $spacing;
+$btn-padding-v-sm: $spacing-half;
+$btn-padding-v-xs: $spacing-half;
